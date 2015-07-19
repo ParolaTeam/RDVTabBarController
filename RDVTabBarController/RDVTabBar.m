@@ -163,9 +163,9 @@
     
     CGFloat alpha = (translucent ? 0.9 : 1.0);
     
-    [_backgroundView setBackgroundColor:[UIColor colorWithRed:245/255.0
-                                                        green:245/255.0
-                                                         blue:245/255.0
+    [_backgroundView setBackgroundColor:[UIColor colorWithRed:59/255.0
+                                                        green:195/255.0
+                                                         blue:242/255.0
                                                         alpha:alpha]];
 }
 

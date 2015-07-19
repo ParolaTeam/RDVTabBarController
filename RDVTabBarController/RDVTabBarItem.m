@@ -69,13 +69,13 @@
     
     if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
         _unselectedTitleAttributes = @{
-                                       NSFontAttributeName: [UIFont systemFontOfSize:12],
+                                       NSFontAttributeName: [UIFont systemFontOfSize:9],
                                        NSForegroundColorAttributeName: [UIColor blackColor],
                                        };
     } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
         _unselectedTitleAttributes = @{
-                                       UITextAttributeFont: [UIFont systemFontOfSize:12],
+                                       UITextAttributeFont: [UIFont systemFontOfSize:9],
                                        UITextAttributeTextColor: [UIColor blackColor],
                                        };
 #endif
@@ -84,7 +84,7 @@
     _selectedTitleAttributes = [_unselectedTitleAttributes copy];
     _badgeBackgroundColor = [UIColor redColor];
     _badgeTextColor = [UIColor whiteColor];
-    _badgeTextFont = [UIFont systemFontOfSize:12];
+    _badgeTextFont = [UIFont systemFontOfSize:9];
     _badgePositionAdjustment = UIOffsetZero;
 }
 
@@ -96,6 +96,7 @@
     UIImage *backgroundImage = nil;
     UIImage *image = nil;
     CGFloat imageStartingY = 0.0f;
+    
     
     if ([self isSelected]) {
         image = [self selectedImage];
@@ -222,20 +223,21 @@
             [badgeTextStyle setLineBreakMode:NSLineBreakByWordWrapping];
             [badgeTextStyle setAlignment:NSTextAlignmentCenter];
             
+            
             NSDictionary *badgeTextAttributes = @{
                                                   NSFontAttributeName: [self badgeTextFont],
-                                                  NSForegroundColorAttributeName: [self badgeTextColor],
+                                                  NSForegroundColorAttributeName: [self isSelected] ? [self badgeTextColor] : [UIColor whiteColor],
                                                   NSParagraphStyleAttributeName: badgeTextStyle,
                                                   };
             
-            [[self badgeValue] drawInRect:CGRectMake(CGRectGetMinX(badgeBackgroundFrame) + textOffset,
-                                                     CGRectGetMinY(badgeBackgroundFrame) + textOffset,
+            [[self badgeValue] drawInRect:CGRectMake(frameSize.width/2 - badgeSize.width/2,
+                                                     frameSize.height/2 - badgeSize.height/2 ,
                                                      badgeSize.width, badgeSize.height)
                 withAttributes:badgeTextAttributes];
         } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-            [[self badgeValue] drawInRect:CGRectMake(CGRectGetMinX(badgeBackgroundFrame) + textOffset,
-                                                     CGRectGetMinY(badgeBackgroundFrame) + textOffset,
+            [[self badgeValue] drawInRect:CGRectMake(frameSize.width/2 - badgeSize.width/2,
+                                                     frameSize.height/2 - badgeSize.height/2 ,
                                                      badgeSize.width, badgeSize.height)
                                  withFont:[self badgeTextFont]
                             lineBreakMode:NSLineBreakByTruncatingTail

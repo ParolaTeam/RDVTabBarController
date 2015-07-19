@@ -100,6 +100,10 @@
 }
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex {
+    
+    
+    
+    
     if (selectedIndex >= self.viewControllers.count) {
         return;
     }
@@ -118,7 +122,7 @@
     [[[self selectedViewController] view] setFrame:[[self contentView] bounds]];
     [[self contentView] addSubview:[[self selectedViewController] view]];
     [[self selectedViewController] didMoveToParentViewController:self];
-    
+    //[[self selectedViewController] viewWillAppear:NO];
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
@@ -255,6 +259,9 @@
 }
 
 - (void)tabBar:(RDVTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index {
+    
+    
+    
     if (index < 0 || index >= [[self viewControllers] count]) {
         return;
     }
