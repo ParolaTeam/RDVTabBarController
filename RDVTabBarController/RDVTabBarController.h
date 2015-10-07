@@ -91,4 +91,6 @@
  */
 @property(nonatomic, readonly) RDVTabBarController *rdv_tabBarController;
 
+@property (nonatomic, readonly) UIView *contentView;
+
 @end

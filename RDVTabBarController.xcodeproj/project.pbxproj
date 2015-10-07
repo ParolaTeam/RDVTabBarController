@@ -440,6 +440,7 @@
 		B4616BC917228DF700863892 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/RDVTabBarController-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Example/RDVTabBarController-Info.plist";
@@ -452,6 +453,7 @@
 		B4616BCA17228DF700863892 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/RDVTabBarController-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Example/RDVTabBarController-Info.plist";
