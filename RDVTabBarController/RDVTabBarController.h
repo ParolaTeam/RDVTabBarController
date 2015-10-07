@@ -63,6 +63,9 @@
  */
 - (void)setTabBarHidden:(BOOL)hidden animated:(BOOL)animated;
 
+@property (nonatomic, readonly) UIView *contentView;
+
+
 @end
 
 @protocol RDVTabBarControllerDelegate <NSObject>
@@ -91,6 +94,5 @@
  */
 @property(nonatomic, readonly) RDVTabBarController *rdv_tabBarController;
 
-@property (nonatomic, readonly) UIView *contentView;
 
 @end
