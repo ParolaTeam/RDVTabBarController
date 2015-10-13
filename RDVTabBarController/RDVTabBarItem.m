@@ -247,7 +247,7 @@
                                                   };
             
             [[self badgeValue] drawInRect:CGRectMake(frameSize.width/2 - badgeSize.width/2,
-                                                     frameSize.height/2 - badgeSize.height/2 ,
+                                                     frameSize.height/2 - badgeSize.height/3 ,
                                                      badgeSize.width, badgeSize.height)
                 withAttributes:badgeTextAttributes];
         } else {
