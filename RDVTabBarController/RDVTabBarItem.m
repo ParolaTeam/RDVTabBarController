@@ -69,13 +69,13 @@
     
     if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
         _unselectedTitleAttributes = @{
-                                       NSFontAttributeName: [UIFont fontWithName:@"TitilliumWeb-Lite" size:9],
+                                       NSFontAttributeName: [UIFont fontWithName:@"TitilliumWeb-Light" size:9],
                                        NSForegroundColorAttributeName: [UIColor whiteColor],
                                        };
     } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
         _unselectedTitleAttributes = @{
-                                       UITextAttributeFont: [UIFont fontWithName:@"TitilliumWeb-Lite" size:9],
+                                       UITextAttributeFont: [UIFont fontWithName:@"TitilliumWeb-Light" size:9],
                                        UITextAttributeTextColor: [UIColor whiteColor],
                                        };
 #endif
@@ -83,13 +83,13 @@
     
     if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
         _selectedTitleAttributes = @{
-                                       NSFontAttributeName: [UIFont fontWithName:@"TitilliumWeb-Lite" size:9],
+                                       NSFontAttributeName: [UIFont fontWithName:@"TitilliumWeb-Light" size:9],
                                        NSForegroundColorAttributeName: [UIColor colorWithRed:59/255.0 green:195/255.0 blue:242/255.0 alpha:1],
                                        };
     } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
         _selectedTitleAttributes = @{
-                                       UITextAttributeFont: [UIFont fontWithName:@"TitilliumWeb-Lite" size:9],
+                                       UITextAttributeFont: [UIFont fontWithName:@"TitilliumWeb-Light" size:9],
                                        UITextAttributeTextColor: [UIColor colorWithRed:59/255.0 green:195/255.0 blue:242/255.0 alpha:1],
                                        };
 #endif
